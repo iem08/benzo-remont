@@ -29,8 +29,7 @@
       },
       "additionalSetColors": [
         "#75dc53",
-        "#995703",
-        "#f0e7ff"
+        "#995703"
       ]
     },
     "path": "@PROJECT_PATH@",
@@ -44,14 +43,14 @@
     ],
     "imageResize": true,
     "favicon": false,
-    "mbrsiteDomain": "gjg3okitk7",
+    "mbrsiteDomain": "dw5drmgdgt",
     "robotsSwitcher": true,
     "sitemapSwitcher": true,
     "sitemapSwitcherAuto": "on",
     "siteUrl": "https://benzo-remont.ru/",
     "cookiesAlert": false,
     "gdpr": false,
-    "uniqCompNum": 141,
+    "uniqCompNum": 139,
     "versionPublish": "5.7.8",
     "screenshot": "screenshot.png",
     "google-analytics": "<!-- Global site tag (gtag.js) - Google Analytics -->\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-198800363-1\">\n</script>\n<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'UA-198800363-1');\n</script>\n\n<!-- Global site tag (gtag.js) - Google Analytics -->\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-128282679-1\">\n</script>\n<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'UA-128282679-1');\n</script>\n\n<script src=\"https://yastatic.net/s3/frontend/forms/_/embed.js\"></script>",
@@ -61,7 +60,10 @@
     "robotsText": "User-agent: *\nDisallow: /cgi-bin\n",
     "dppsSwitcher": true,
     "spellingSwitch": true,
-    "site_lang": "en"
+    "site_lang": "en",
+    "publishType": "local",
+    "publishPath": "@PROJECT_PATH@",
+    "canonical-url": false
   },
   "pages": {
     "index.html": {
@@ -613,6 +615,50 @@
           "_global": false,
           "_once": false,
           "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value",
+              "& when (@twoColor)": {
+                "background": "linear-gradient(225deg, @bg-value 0, @twoColorBg 75%)"
+              }
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".image-block": {
+              "position": "relative",
+              "z-index": "1",
+              "& when not (@fullWidth)": {
+                "@media (max-width: 767px)": {
+                  "width": "100% !important"
+                }
+              },
+              "& when not (@showText)": {
+                "box-shadow": "inset 0 0 0 1px #ebebf0, 0 15px 30px 0 rgba(0, 0, 0, 0.15)",
+                "border-radius": "10px"
+              }
+            },
+            "img": {
+              "border-radius": "10px",
+              "object-fit": "contain"
+            }
+          },
+          "_name": "image2",
+          "_sourceTheme": "mobirise-amp",
+          "_customHTML": "<section class=\"image2\" group=\"Images & Videos\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" value=\"5\" step=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" value=\"5\" step=\"1\">\n        <header>Show/Hide</header>\n        <input type=\"range\" inline title=\"Width\" name=\"videoSize\" min=\"4\" max=\"12\" value=\"9\" step=\"1\">\n        <input type=\"checkbox\" title=\"Caption\" name=\"showText\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Image\" value=\"../_images/background4.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#5400d7\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"2 Color\" name=\"twoColor\" condition=\"bg.type == 'color'\" checked>\n        <input type=\"color\" title=\"Color 2\" value=\"#ffffff\" name=\"twoColorBg\" condition=\"twoColor && bg.type == 'color'\">\n    </mbr-parameters>\n    \n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid' : fullWidth }\">\n            <div class=\"mbr-row mbr-jc-c\">\n                <div class=\"mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-{{videoSize}}\">\n                    <div class=\"image-block\">\n                        <iframe src=\"https://forms.yandex.ru/u/6449743c3e9d0803014eb65e/?iframe=1\" frameborder=\"0\" name=\"ya-form-6449743c3e9d0803014eb65e\" width=\"650\"></iframe>\n                            <div placeholder class=\"placeholder\"></div>\n                            <iframe src=\"https://forms.yandex.ru/u/6449743c3e9d0803014eb65e/?iframe=1\" frameborder=\"0\" name=\"ya-form-6449743c3e9d0803014eb65e\" width=\"650\"></iframe>\n                        </amp-img>\n                        <div class=\"mbr-figure-caption\" mbr-if=\"showText\">\n                            <p mbr-text class=\"mbr-text mbr-white align-center mbr-fonts-style\" mbr-class=\"{'mbr-py-1': !fullWidth, 'mbr-py-1 mbr-px-4': fullWidth}\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                                Create awesome and FAST websites!\n                            </p>\n                        </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "tCyUMkRs5P",
+          "_anchor": "image2-3u",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_PHPplaceholders": [],
+          "_JSplaceholders": []
         },
         {
           "alias": false,

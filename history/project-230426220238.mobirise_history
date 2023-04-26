@@ -29,8 +29,7 @@
       },
       "additionalSetColors": [
         "#75dc53",
-        "#995703",
-        "#f0e7ff"
+        "#995703"
       ]
     },
     "path": "@PROJECT_PATH@",
@@ -44,24 +43,26 @@
     ],
     "imageResize": true,
     "favicon": false,
-    "mbrsiteDomain": "gjg3okitk7",
+    "mbrsiteDomain": "s1aecdgjut",
     "robotsSwitcher": true,
     "sitemapSwitcher": true,
     "sitemapSwitcherAuto": "on",
     "siteUrl": "https://benzo-remont.ru/",
     "cookiesAlert": false,
     "gdpr": false,
-    "uniqCompNum": 141,
+    "uniqCompNum": 138,
     "versionPublish": "5.7.8",
     "screenshot": "screenshot.png",
-    "google-analytics": "<!-- Global site tag (gtag.js) - Google Analytics -->\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-198800363-1\">\n</script>\n<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'UA-198800363-1');\n</script>\n\n<!-- Global site tag (gtag.js) - Google Analytics -->\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-128282679-1\">\n</script>\n<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'UA-128282679-1');\n</script>\n\n<script src=\"https://yastatic.net/s3/frontend/forms/_/embed.js\"></script>",
+    "google-analytics": "<!-- Global site tag (gtag.js) - Google Analytics -->\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-198800363-1\">\n</script>\n<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'UA-198800363-1');\n</script>\n\n<!-- Global site tag (gtag.js) - Google Analytics -->\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-128282679-1\">\n</script>\n<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'UA-128282679-1');\n</script>",
     "witsec-white-label": true,
     "global_header_custom": "<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-M5C8L3G');</script>\n<!-- End Google Tag Manager -->\n",
     "global_after_body": "<!-- Google Tag Manager (noscript) -->\n<noscript><iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-M5C8L3G\"\nheight=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe></noscript>\n<!-- End Google Tag Manager (noscript) -->",
     "robotsText": "User-agent: *\nDisallow: /cgi-bin\n",
     "dppsSwitcher": true,
     "spellingSwitch": true,
-    "site_lang": "en"
+    "site_lang": "en",
+    "publishType": "local",
+    "publishPath": "@PROJECT_PATH@"
   },
   "pages": {
     "index.html": {
@@ -613,6 +614,42 @@
           "_global": false,
           "_once": false,
           "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value",
+              "& when (@twoColor)": {
+                "background": "linear-gradient(225deg, @bg-value 0, @twoColorBg 75%)"
+              }
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "amp-img": {
+              "box-shadow": "inset 0 0 0 1px #ebebf0, 0 15px 30px 0 rgba(0, 0, 0, 0.15)",
+              "border-radius": "10px",
+              "img": {
+                "object-fit": "cover"
+              }
+            }
+          },
+          "_name": "header2",
+          "_sourceTheme": "mobirise-amp",
+          "_customHTML": "<section class=\"header2\" group=\"Headers\" plugins=\"amp-main\" mbr-class=\"{'mbr-fullscreen': fullScreen}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <select name=\"alignContent\" title=\"Align\">\n            <option value=\"1\">Left</option>\n            <option value=\"2\" selected>Center</option>\n            <option value=\"3\">Right</option>\n        </select>\n        <input type=\"range\" inline title=\"Width\" name=\"widthContent\" min=\"4\" max=\"10\" value=\"8\" step=\"1\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\">\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubTitle\">\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Image\" value=\"../_images/background2.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"2 Color\" name=\"twoColor\" condition=\"bg.type == 'color'\">\n        <input type=\"color\" title=\"Color 2\" value=\"#005af0\" name=\"twoColorBg\" condition=\"twoColor && bg.type == 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"mbr-row\" mbr-class=\"{'mbr-jc-c' : alignContent == 2, 'mbr-jc-e' : alignContent == 3}\">\n            <div class=\"mbr-col-lg-{{widthContent}} mbr-col-sm-12 mbr-col-md-12 mbr-flex mbr-column\">\n                <h1 class=\"mbr-fonts-style align-center mbr-bold mbr-pb-2 mbr-section-title\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">\n                    Mobirise AMP\n                </h1>\n                <h3 class=\"mbr-section-subtitle mbr-fonts-style align-center mbr-semibold mbr-pb-3\" mbr-if=\"showSubTitle\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-section-subtitle\">\n                    Accelerated Mobile Pages By Google\n                </h3>\n                <div class=\"mbr-text align-center\">\n                    <p class=\"mbr-text mbr-fonts-style mbr-pb-3\" mbr-if=\"showText\" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod at id fugiat natus a voluptas eveniet officia iure nihil nostrum ad, modi ipsam, dicta ullam accusamus, voluptate aspernatur. Accusamus, aliquid?\n                    </p>\n                </div>\n                <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-4\"><a class=\"btn btn-md btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Start Building</a>\n                    <a class=\"btn btn-md btn-info\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Learn More</a></div>\n                <div class=\"mbr-pt-4\">\n                    <amp-img src=\"@THEME_PATH@/components/_images/img/01.jpg\" alt=\"Mobirise Website Builder\" width=\"727.9875\" height=\"485.325\" layout=\"responsive\" class=\"mobirise-loader mbr-m-auto align-center\">\n                        <div placeholder class=\"placeholder\"></div>\n                        <iframe src=\"https://forms.yandex.ru/u/6449743c3e9d0803014eb65e/?iframe=1\" frameborder=\"0\" name=\"ya-form-6449743c3e9d0803014eb65e\" width=\"650\"></iframe>\n                    </amp-img>\n                </div>\n            </div>\n        </div>\n    </div>\n\n</section>",
+          "_cid": "tCyUj72H4N",
+          "_anchor": "header2-3t",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_PHPplaceholders": [],
+          "_JSplaceholders": []
         },
         {
           "alias": false,

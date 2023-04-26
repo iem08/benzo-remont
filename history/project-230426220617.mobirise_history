@@ -29,8 +29,7 @@
       },
       "additionalSetColors": [
         "#75dc53",
-        "#995703",
-        "#f0e7ff"
+        "#995703"
       ]
     },
     "path": "@PROJECT_PATH@",
@@ -44,14 +43,14 @@
     ],
     "imageResize": true,
     "favicon": false,
-    "mbrsiteDomain": "gjg3okitk7",
+    "mbrsiteDomain": "dw5drmgdgt",
     "robotsSwitcher": true,
     "sitemapSwitcher": true,
     "sitemapSwitcherAuto": "on",
     "siteUrl": "https://benzo-remont.ru/",
     "cookiesAlert": false,
     "gdpr": false,
-    "uniqCompNum": 141,
+    "uniqCompNum": 139,
     "versionPublish": "5.7.8",
     "screenshot": "screenshot.png",
     "google-analytics": "<!-- Global site tag (gtag.js) - Google Analytics -->\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-198800363-1\">\n</script>\n<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'UA-198800363-1');\n</script>\n\n<!-- Global site tag (gtag.js) - Google Analytics -->\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-128282679-1\">\n</script>\n<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'UA-128282679-1');\n</script>\n\n<script src=\"https://yastatic.net/s3/frontend/forms/_/embed.js\"></script>",
@@ -61,7 +60,9 @@
     "robotsText": "User-agent: *\nDisallow: /cgi-bin\n",
     "dppsSwitcher": true,
     "spellingSwitch": true,
-    "site_lang": "en"
+    "site_lang": "en",
+    "publishType": "local",
+    "publishPath": "@PROJECT_PATH@"
   },
   "pages": {
     "index.html": {
